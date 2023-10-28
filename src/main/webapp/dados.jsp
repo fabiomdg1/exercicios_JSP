@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<%
+		String pais = request.getParameter("pais");
+		out.print("Seu país é: " + pais + "<br>");
+		
+		String sexo = request.getParameter("sexo");
+		out.print("Seu sexo é: " + sexo + "<br/>");
+		
+		String[] linguas = request.getParameterValues("linguas");
+		for(String lingua : linguas){
+			out.print("Você fala: " + lingua + "<br/>");
+		}
+	%>
+
+</body>
+</html>
